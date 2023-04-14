@@ -1,7 +1,7 @@
-all: kilo
+all: zen
 
-kilo: kilo.c
-	$(CC) -o kilo kilo.c -Wall -W -pedantic -std=c99
+zen: zen.c
+	$(CC) -o zen zen.c -Wall -W -pedantic -std=c99
 
 clean:
-	rm kilo
+	rm zen

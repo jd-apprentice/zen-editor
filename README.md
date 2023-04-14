@@ -1,12 +1,21 @@
 # Zen 🕊️
 
-- Small text editor written in C
-- Fork from [antirez's](https://github.com/antirez) kilo
+Small text editor written in C
+Fork from [antirez's](https://github.com/antirez) kilo
+
+## Requirements 📋
+
+To compile and run the editor you need:
+
+- gcc
+- make
 
 ## Usage 🚀
 
+For a simple example you can run the `make` command and this will compile the `zen` binary then create a `example.js` file and open it in the editor.
+
 ```bash
-kilo <filename>
+zen <filename>
 ```
 
 ## Features 🪶

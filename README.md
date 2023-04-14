@@ -1,19 +1,18 @@
-# Zen
+# Zen 🕊️
 
 - Small text editor written in C
-- Based on [antirez's](https://github.com/antirez) kilo
+- Fork from [antirez's](https://github.com/antirez) kilo
 
-### Usage 🚀
+## Usage 🚀
 
 ```bash
 kilo <filename>
 ```
 
-### Features 🪶
+## Features 🪶
 
 ```
 CTRL-S: Save
 CTRL-Q: Quit
 CTRL-F: Find string in file (ESC to exit search, arrows to navigate)
-
 ```

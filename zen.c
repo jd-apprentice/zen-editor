@@ -161,8 +161,8 @@ void editorSetStatusMessage(const char *fmt, ...);
  *
  * There is no support to highlight patterns currently. */
 
-/* C / C++ */
-char *C_HL_extensions[] = {".c",".h",".cpp",".hpp",".cc",NULL};
+/* C, C++, Javascript, Python, Bash */
+char *C_HL_extensions[] = {".c",".h",".cpp",".hpp",".cc", ".js", ".ts", ".py", ".sh",NULL};
 char *C_HL_keywords[] = {
 	/* C Keywords */
 	"auto","break","case","continue","default","do","else","enum",
@@ -178,16 +178,38 @@ char *C_HL_keywords[] = {
 	"static_cast","template","this","thread_local","throw","true","try",
 	"typeid","typename","virtual","xor","xor_eq",
 
+    /* Javascript Keywords */
+    "var","let","const","function","return","if","else","for","while","do",
+    "break","continue","switch","case","default","try","catch","finally","throw",
+    "new","delete","typeof","instanceof","in","void","undefined","null","true","false",
+    "class","extends","super","this","import","export","from","as","with","yield",
+    "debugger","async","await","static","get","set","constructor","prototype",
+
+    /* Python Keywords */
+    "and","as","assert","break","class","continue","def","del","elif","else","except",
+    "exec","finally","for","from","global","if","import","in","is","lambda","not","or",
+    "pass","print","raise","return","try","while","with","yield",
+
+    /* Bash Keywords */
+    "alias","bg","bind","break","builtin","caller","case","command","compgen","complete",
+    "compopt","continue","declare","dirs","disown","echo","enable","eval","exec","exit",
+    "export","false","fc","fg","getopts","hash","help","history","jobs","kill","let",
+    "local","logout","mapfile","popd","printf","pushd","pwd","read","readarray","readonly",
+
+    /* Javascript/Typescript types */
+    "Array|","Boolean|","Date|","Error|","Function|","Number|","Object|","RegExp|","String|",
+    "Symbol|","Map|","Set|","WeakMap|","WeakSet|","ArrayBuffer|","DataView|","Float32Array|", NULL,
+
 	/* C types */
-        "int|","long|","double|","float|","char|","unsigned|","signed|",
-        "void|","short|","auto|","const|","bool|",NULL
+    "int|","long|","double|","float|","char|","unsigned|","signed|",
+    "void|","short|","auto|","const|","bool|",NULL
 };
 
 /* Here we define an array of syntax highlights by extensions, keywords,
  * comments delimiters and flags. */
 struct editorSyntax HLDB[] = {
     {
-        /* C / C++ */
+        /* C / C++ / Javascript / Python / Bash */
         C_HL_extensions,
         C_HL_keywords,
         "//","/*","*/",

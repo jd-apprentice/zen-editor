@@ -14,6 +14,8 @@ To compile and run the editor you need:
 
 For a simple example you can run the `make` command and this will compile the `zen` binary then create a `example.js` file and open it in the editor.
 
+Or you can simply run
+
 ```bash
 zen <filename>
 ```
